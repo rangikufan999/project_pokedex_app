@@ -1,0 +1,73 @@
+<div class="container">
+	<!-- picture -->
+	<div class="row">
+		<div class="col"> 
+			<h1 class="text-center">{{pokedata.name.charAt(0).toUpperCase() + pokedata.name.slice(1)}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<img ng-src="{{pokedata.sprites.front_default}}" style="height:75px;width:75px;" />
+			<img ng-src="{{pokedata.sprites.back_default}}" style="height:75px;width:75px;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<img ng-src="{{pokedata.sprites.front_shiny}}" style="height:75px;width:75px;" />
+			<img ng-src="{{pokedata.sprites.back_shiny}}" style="height:75px;width:75px;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<h1>Size</h1>
+			<hr/>
+			<p>Height: {{pokedata.height / 10}} Meters</p><br/>
+			<p>Weight: {{kilogramsToPounds(pokedata.weight)}} lbs.</p><br/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<h1>Types</h1>
+			<hr/>
+			<p>Type 1: <img ng-src="img/types/{{pokedata.types[0].type.name}}.png" style="height:30px;width:120px;" /></p><br/>
+			<p>Type 2: <img ng-src="img/types/{{pokedata.types[1].type.name}}.png" style="height:30px;width:120px;" /></p><br/>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h1>Abilities</h1>
+			<hr/>
+			<p>Ability 1: {{pokedata.abilities[0].ability.name.charAt(0).toUpperCase() + pokedata.abilities[0].ability.name.slice(1)}}</p><br/>
+			<p>Ability 2: {{pokedata.abilities[1].ability.name.charAt(0).toUpperCase() + pokedata.abilities[1].ability.name.slice(1)}}</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h1>Base Stats</h1>
+			<hr/>
+			<p>{{pokedata.stats[0].stat.name.charAt(0).toUpperCase() + pokedata.stats[0].stat.name.slice(1)}}: {{pokedata.stats[0].base_stat}}</p><br/>
+			<p>{{pokedata.stats[1].stat.name.charAt(0).toUpperCase() + pokedata.stats[1].stat.name.slice(1)}}: {{pokedata.stats[1].base_stat}}</p><br/>
+			<p>{{pokedata.stats[2].stat.name.charAt(0).toUpperCase() + pokedata.stats[2].stat.name.slice(1)}}: {{pokedata.stats[2].base_stat}}</p><br/>
+			<p>{{pokedata.stats[3].stat.name.charAt(0).toUpperCase() + pokedata.stats[3].stat.name.slice(1)}}: {{pokedata.stats[3].base_stat}}</p><br/>
+			<p>{{pokedata.stats[4].stat.name.charAt(0).toUpperCase() + pokedata.stats[4].stat.name.slice(1)}}: {{pokedata.stats[4].base_stat}}</p><br/>
+			<p>{{pokedata.stats[5].stat.name.charAt(0).toUpperCase() + pokedata.stats[5].stat.name.slice(1)}}: {{pokedata.stats[5].base_stat}}</p><br/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<h1>Moves</h1>
+			<hr/>
+			<span>Move Name:  {{pokedata.moves[0].move.name.charAt(0).toUpperCase() + pokedata.moves[0].move.name.slice(1)}} </span><br/><span>Move Learn Method: {{pokedata.moves[0].version_group_details[0].move_learn_method.name.charAt(0).toUpperCase() + pokedata.moves[0].version_group_details[0].move_learn_method.name.slice(1)}} </span><br/><span>Level Learned at: {{pokedata.moves[0].version_group_details[0].level_learned_at}} </span><hr/><br/>
+
+			<span>Move Name:  {{pokedata.moves[1].move.name.charAt(0).toUpperCase() + pokedata.moves[1].move.name.slice(1)}} </span><br/><span>Move Learn Method: {{pokedata.moves[1].version_group_details[1].move_learn_method.name.charAt(0).toUpperCase() + pokedata.moves[1].version_group_details[1].move_learn_method.name.slice(1)}} </span><br/><span>Level Learned at: {{pokedata.moves[1].version_group_details[0].level_learned_at}} </span><hr/><br/>
+
+			<span>Move Name:  {{pokedata.moves[2].move.name.charAt(0).toUpperCase() + pokedata.moves[2].move.name.slice(1)}} </span><br/><span>Move Learn Method: {{pokedata.moves[2].version_group_details[2].move_learn_method.name.charAt(0).toUpperCase() + pokedata.moves[2].version_group_details[2].move_learn_method.name.slice(1)}} </span><br/><span>Level Learned at: {{pokedata.moves[2].version_group_details[0].level_learned_at}} </span><hr/><br/>
+
+			<span>Move Name:  {{pokedata.moves[3].move.name.charAt(0).toUpperCase() + pokedata.moves[3].move.name.slice(1)}} </span><br/><span>Move Learn Method: {{pokedata.moves[3].version_group_details[3].move_learn_method.name.charAt(0).toUpperCase() + pokedata.moves[3].version_group_details[3].move_learn_method.name.slice(1)}} </span><br/><span>Level Learned at: {{pokedata.moves[3].version_group_details[0].level_learned_at}} </span><hr/><br/>
+
+			<span>Move Name:  {{pokedata.moves[4].move.name.charAt(0).toUpperCase() + pokedata.moves[4].move.name.slice(1)}} </span><br/><span>Move Learn Method: {{pokedata.moves[4].version_group_details[4].move_learn_method.name.charAt(0).toUpperCase() + pokedata.moves[4].version_group_details[4].move_learn_method.name.slice(1)}} </span><br/><span>Level Learned at: {{pokedata.moves[4].version_group_details[0].level_learned_at}} </span><hr/><br/>
+		</div>
+	</div>
+</div>

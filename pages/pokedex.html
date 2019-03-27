@@ -1,0 +1,37 @@
+<h1>Welcome to the Pokédex app</h1>
+<hr/><br/>
+<label>Pick a search method!</label><br/><br/>
+<input type="radio" ng-model="method" value="matchByName"> Name 
+<input type="radio" ng-model="method" value="matchByType"> Type 
+<input type="radio" ng-model="method" value="matchByStage"> Stage<br/><br/>
+<input type="text" ng-model="input"></input><br/><br/>
+<hr/>
+
+
+<br/><br/>
+<div class="container">
+	<p class="alert alert-primary text-center" ng-show="method=='matchByName'">Enter in the name of the pokemon you are looking for!</p>
+	<p class="alert alert-primary text-center" ng-show="method=='matchByType'">Enter in a pokemon type that you are looking for!</p>
+	<p class="alert alert-primary text-center" ng-show="method=='matchByStage'">Enter in a stage of pokemon you are looking for utilizing the search terms: "baby", "basic", "stage one", or "stage two"</p>
+</div>
+<hr/>
+<div class="container pokedex-container justify-content-center">
+	<ul ng-show="method == 'matchByName'">
+		<li ng-repeat="x in srcData.results"  ng-show="x.name.includes(input) ">
+				<img ng-src="img/{{x.name}}.png" style="width:70px;height:70px" ng-click="clickPokemon(x.name)" />
+		</li>
+	</ul>
+
+	<ul ng-show="method == 'matchByType' && typeList.includes(input)">
+		<li ng-repeat="x in srcData.results" ng-show="pokemonTypes[input].includes(x.name)">
+			
+			<img ng-src="img/{{x.name}}.png" style="width:70px;height:70px;" ng-click="clickPokemon(x.name)" />
+		</li>
+	</ul>
+
+	<ul ng-show="method == 'matchByStage' && stageList.includes(input)">
+		<li ng-repeat="x in srcData.results" ng-show="pokemonStages[input].includes(x.name)">
+			<img ng-src="img/{{x.name}}.png" style="width:70px;height:70px;" ng-click="clickPokemon(x.name)" />
+		</li>
+	</ul>
+</div>
