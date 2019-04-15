@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="pokeApp">
+	<head>
+		<meta charset="UTF-8"></meta>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="stylesheets/jquery-ui.css"></link>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery-ui.js"></script>
+        <script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+        <link rel="stylesheet" href="stylesheets/pokestyle.css"></link>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-pokecolor">
+    		<div class="container">
+    			<div class="navbar-header">
+    				<a class="navbar-brand text-light" href="#">
+    					<img style="height:50px;width=70px;" src="img/plogo.svg">
+    				</a>
+    			</div>
+
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="#" class="text-light"><i class="fa fa-home fa-3x"></i></a></li>
+    			</ul>
+    		</div>
+    	</nav>
+    	<br/>
+        <div class="container text-center" ng-view>
+
+        </div>
+        <script src="scripts/pokemonStages.js"></script>
+        <script src="scripts/pokemonTypes.js"></script>
+        <script src="scripts/pokemonJSON.js"></script>
+        <script src="scripts/pokedex.js"></script>
+    </body>
+</html>

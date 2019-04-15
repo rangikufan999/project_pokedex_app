@@ -1,0 +1,39 @@
+.pokedex-container li{
+	display:inline-block;
+	margin:5px;
+	width:90px;
+	height:90px;
+	padding:8px;
+	border-radius:25px;
+	background-color:#ffcb05;
+}
+
+.pokedex-container li:hover{
+	background-color:#ffe37c;
+}
+
+.pokedex-container li:active{
+	background-color:#cca100;
+	transform: translateY(2px);
+}
+
+
+
+.pokedex-container ul{
+	list-style:none;
+	margin-left:-35px;
+}
+
+.navbar-pokecolor{
+	background-color:#003a70;
+}
+
+.pokedex-container{
+	background-color:#3d7dca;
+	padding:7.5px;
+	border-radius:25px;
+}
+
+input[type="radio"]{
+	display:inline;
+}
